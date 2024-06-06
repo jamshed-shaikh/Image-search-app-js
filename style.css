@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    /* background-color: #333; */
+}
+
+#main-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 50px;
+    font-weight: 900;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    /* padding: 20px; */
+    margin-bottom: 50px;
+}
+
+#search-panel {
+    width: 300px;
+    font-size: 1.2rem;
+    color: #333;
+    padding: 7px;
+    border-radius: 6px;
+}
+
+#submit-btn {
+    font-size: 1rem;
+    background-color: #138065;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.search-results {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.search-result {
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.search-result img {
+    width: 100%;
+    height: 100%;
+    transition: 0.4s ease-in-out;
+}
+
+.search-result:hover img {
+    opacity: 0.8;
+}
+
+.search-result a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #333;
+    text-transform: capitalize;
+    display: block;
+    padding: 10px;
+}
+
+#show-more {
+    text-align: center;
+    background-color: #008cba;
+    color: white;
+    margin: 50px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: none;
+}
+
+#dark-mode-toggle {
+    position: absolute;
+    right: 10%;
+    top: 4%;
+    padding: 7px;
+    border-radius: 6px;
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode a {
+    color: #fff;
+}
+
+.dark-mode #main-heading {
+    color: #fff;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 1024px) {
+    .search-result {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .search-results {
+        padding: 20px;
+    }
+
+    .search-result {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search-results {
+        padding: 20px;
+    }
+
+    #main-heading {
+        font-size: 1.8rem;
+    }
+
+    #search-panel {
+        width: 200px;
+    }
+
+    .search-result {
+        width: 100%;
+    }
+}
